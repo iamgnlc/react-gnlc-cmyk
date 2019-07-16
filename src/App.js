@@ -1,13 +1,18 @@
 import React from "react";
-import "./App.scss";
-import g from "./assets/g.svg";
-import n from "./assets/n.svg";
-import l from "./assets/l.svg";
-import c from "./assets/c.svg";
 
-function App() {
+import "./App.scss";
+import g from "./assets/images/g.svg";
+import n from "./assets/images/n.svg";
+import l from "./assets/images/l.svg";
+import c from "./assets/images/c.svg";
+
+import Head from "./Head";
+import Repo from "./Repo";
+
+const App = React.memo(() => {
   return (
     <div className="cmyk">
+      <Head />
       <div className="portion cyan">
         <img className="letter g" src={g} alt="g" />
       </div>
@@ -20,8 +25,9 @@ function App() {
       <div className="portion black">
         <img className="letter c" src={c} alt="c" />
       </div>
+      <Repo />
     </div>
   );
-}
+});
 
 export default App;

@@ -2,6 +2,7 @@ $cyan: #00adef;
 $magenta: #ec008c;
 $yellow: #fff200;
 $black: #000000;
+$white: #ffffff;
 
 @mixin bg {
   background: $black;
@@ -67,7 +68,8 @@ body,
     flex-direction: row;
   }
 
-  * {
+  .portion,
+  .portion > * {
     height: 100%;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -106,5 +108,21 @@ body,
       left: -10000%;
       right: -10000%;
     }
+  }
+}
+.repo {
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  padding: 0.125rem 0.25rem;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  font-size: 0.775rem;
+  font-weight: 300;
+  mix-blend-mode: difference;
+  color: $white;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
   }
 }
