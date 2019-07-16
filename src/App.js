@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./App.scss"
+import "./styles/App.scss"
 import g from "./assets/images/g.svg"
 import n from "./assets/images/n.svg"
 import l from "./assets/images/l.svg"

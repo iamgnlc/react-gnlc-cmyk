@@ -2,13 +2,13 @@ import React from "react"
 import ReactDOM from "react-dom"
 import * as Sentry from "@sentry/browser"
 
-import "./index.scss"
+import "./styles/index.scss"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
 
 Sentry.init({
-  dsn: `https://${process.env.REACT_SENTRY_KEY}@sentry.io/${
-    process.env.REACT_SENTRY_PID
+  dsn: `https://${process.env.REACT_APP_SENTRY_KEY}@sentry.io/${
+    process.env.REACT_APP_SENTRY_PID
   }`,
 })
 
