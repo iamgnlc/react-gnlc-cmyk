@@ -1,7 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from "react"
+import Helmet from "react-helmet"
 
-import preview from "./assets/images/preview.png";
+import preview from "./assets/images/preview.png"
 
 const Head = React.memo(() => {
   return (
@@ -40,7 +40,7 @@ const Head = React.memo(() => {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     </Helmet>
-  );
-});
+  )
+})
 
-export default Head;
+export default Head
