@@ -1,8 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import * as Sentry from "@sentry/browser"
+
 import "./index.scss"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
+
+Sentry.init({
+  dsn: `https://${process.env.REACT_SENTRY_KEY}@sentry.io/${
+    process.env.REACT_SENTRY_PID
+  }`,
+})
 
 ReactDOM.render(<App />, document.getElementById("root"))
 
