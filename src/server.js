@@ -30,9 +30,6 @@ server
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
         ${helmet.link.toString()}
-        <link rel="shortcut icon" href="${
-          process.env.PUBLIC_PATH
-        }favicon.ico" />
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`

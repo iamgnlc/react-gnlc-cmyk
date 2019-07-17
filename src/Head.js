@@ -1,15 +1,17 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from "react"
+import Helmet from "react-helmet"
 
-import preview from "./assets/images/preview.png";
+import preview from "./assets/images/preview.png"
+import favicon from "./assets/favicon.ico"
 
-const author = process.env.RAZZLE_AUTHOR;
 const Head = React.memo(() => {
   return (
     <Helmet>
       <title>
         {`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
       </title>
+      <link rel="shortcut icon" href={favicon} />
+      <meta name="robots" content="noindex" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
       <meta
@@ -36,7 +38,7 @@ const Head = React.memo(() => {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     </Helmet>
-  );
-});
+  )
+})
 
-export default Head;
+export default Head
