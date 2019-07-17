@@ -1,16 +1,16 @@
 import React from "react"
 
 const Repo = React.memo(() => {
-  return (
+  return process.env.RAZZLE_REPO_URL ? (
     <a
       className="repo"
-      href={process.env.REACT_APP_REPO_URL}
+      href={process.env.RAZZLE_REPO_URL}
       target="_blank"
       rel="noopener noreferrer"
     >
-      {process.env.REACT_APP_REPO_URL}
+      {process.env.RAZZLE_REPO_URL}
     </a>
-  )
+  ) : null
 })
 
 export default Repo
