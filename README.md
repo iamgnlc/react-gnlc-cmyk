@@ -1,6 +1,6 @@
 # GNLC/CMYK
 
-GNLC React animated logo.
+GNLC React animated logo. Using Razzle for SSR.
 
 ```
 $ yarn install
