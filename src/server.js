@@ -25,31 +25,30 @@ server
       const helmet = Helmet.renderStatic()
       res.status(200).send(
         `<!doctype html>
-        <html lang="en" ${helmet.htmlAttributes.toString()}>
-        <head>
-            ${helmet.title.toString()}
-            ${helmet.meta.toString()}
-            ${helmet.link.toString()}
-            <link rel="shortcut icon" href="${
-              process.env.PUBLIC_PATH
-            }favicon.ico" />
-            ${
-              assets.client.css
-                ? `<link rel="stylesheet" href="${assets.client.css}">`
-                : ""
-            }
-            ${
-              process.env.NODE_ENV === "production"
-                ? `<script src="${assets.client.js}" defer></script>`
-                : `<script src="${
-                    assets.client.js
-                  }" defer crossorigin></script>`
-            }
-        </head>
-        <body ${helmet.bodyAttributes.toString()}>
-            <div id="root">${markup}</div>
-        </body>
-        </html>`,
+    <html lang="en" ${helmet.htmlAttributes.toString()}>
+    <head>
+        ${helmet.title.toString()}
+        ${helmet.meta.toString()}
+        ${helmet.link.toString()}
+        <link rel="shortcut icon" href="${
+          process.env.PUBLIC_PATH
+        }favicon.ico" />
+        ${
+          assets.client.css
+            ? `<link rel="stylesheet" href="${assets.client.css}">`
+            : ""
+        }
+        ${
+          process.env.NODE_ENV === "production"
+            ? `<script src="${assets.client.js}" defer></script>`
+            : `<script src="${assets.client.js}" defer crossorigin></script>`
+        }
+    </head>
+    <body ${helmet.bodyAttributes.toString()}>
+        <div id="root">${markup}</div>
+    </body>
+    </html>
+    <!-- GNLC -->`,
       )
     }
   })

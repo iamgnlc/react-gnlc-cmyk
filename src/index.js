@@ -1,4 +1,5 @@
 import http from "http"
+import * as Sentry from "@sentry/browser"
 
 let app = require("./server").default
 
@@ -12,6 +13,12 @@ server.listen(process.env.PORT || 3000, (error) => {
   }
 
   console.log("🚀 started")
+})
+
+Sentry.init({
+  dsn: `https://${process.env.RAZZLE_SENTRY_KEY}@sentry.io/${
+    process.env.RAZZLE_SENTRY_PID
+  }`,
 })
 
 if (module.hot) {
