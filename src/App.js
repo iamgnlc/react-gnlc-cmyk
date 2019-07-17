@@ -13,16 +13,16 @@ const App = React.memo(() => {
   return (
     <div className="cmyk">
       <Head />
-      <div className="portion cyan">
+      <div className="panel cyan">
         <img className="letter g" src={g} alt="g" />
       </div>
-      <div className="portion magenta">
+      <div className="panel magenta">
         <img className="letter n" src={n} alt="n" />
       </div>
-      <div className="portion yellow">
+      <div className="panel yellow">
         <img className="letter l" src={l} alt="l" />
       </div>
-      <div className="portion black">
+      <div className="panel black">
         <img className="letter c" src={c} alt="c" />
       </div>
       <Repo />
