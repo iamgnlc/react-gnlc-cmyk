@@ -15,6 +15,7 @@ server.listen(process.env.PORT || 3000, (error) => {
   console.log("🚀 started")
 })
 
+// Sentry.
 Sentry.init({
   dsn: `https://${process.env.RAZZLE_SENTRY_KEY}@sentry.io/${
     process.env.RAZZLE_SENTRY_PID

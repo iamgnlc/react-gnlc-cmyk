@@ -1,8 +1,8 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-import preview from "./assets/images/preview.png"
-import favicon from "./assets/favicon.ico"
+import preview from "../assets/images/preview.png"
+import favicon from "../assets/favicon.ico"
 
 const Head = React.memo(() => {
   return (
@@ -34,6 +34,20 @@ const Head = React.memo(() => {
       />
       <meta property="og:description" content={process.env.RAZZLE_NAME} />
       <meta property="og:image" content={preview} />
+
+      <meta
+        name="twitter:title"
+        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+      />
+      <meta name="twitter:description" content={process.env.RAZZLE_NAME} />
+      <meta name="twitter:image" content={preview} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={`@${process.env.RAZZLE_AUTHOR}`} />
+      <meta
+        name="twitter:image:alt"
+        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+      />
+
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
