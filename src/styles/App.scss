@@ -53,9 +53,15 @@ $white: #ffffff;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cyan', endColorstr='$black',GradientType=0 );
 }
 
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+
 html,
 body,
 #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   @include bg;
 }
 .cmyk {

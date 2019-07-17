@@ -28,3 +28,8 @@ yarn-error.log*
 
 deploy.command
 .env
+
+logs
+*.log
+npm-debug.log*
+.DS_Store
