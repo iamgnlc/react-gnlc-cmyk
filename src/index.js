@@ -7,19 +7,19 @@ const server = http.createServer(app)
 
 let currentApp = app
 
+// Sentry.
+Sentry.init({
+  dsn: `https://${process.env.RAZZLE_SENTRY_KEY}@sentry.io/${
+    process.env.RAZZLE_SENTRY_PID
+  }`,
+})
+
 server.listen(process.env.PORT || 3000, (error) => {
   if (error) {
     console.log(error)
   }
 
   console.log("🚀 started")
-})
-
-// Sentry.
-Sentry.init({
-  dsn: `https://${process.env.RAZZLE_SENTRY_KEY}@sentry.io/${
-    process.env.RAZZLE_SENTRY_PID
-  }`,
 })
 
 if (module.hot) {

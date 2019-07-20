@@ -1,6 +1,6 @@
 "use strict"
-
 const path = require("path")
+
 module.exports = {
   // Firebase.
   modify(config, { target, dev }) {

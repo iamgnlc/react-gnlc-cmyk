@@ -9,22 +9,24 @@ import c from "../assets/images/c.svg"
 import Head from "./Head"
 import Repo from "./Repo"
 
+const letters = [
+  { key: "g", img: g },
+  { key: "n", img: n },
+  { key: "l", img: l },
+  { key: "c", img: c },
+]
+
 const App = React.memo(() => {
   return (
     <div className="cmyk">
       <Head />
-      <div className="panel cyan">
-        <img className="letter g" src={g} alt="g" />
-      </div>
-      <div className="panel magenta">
-        <img className="letter n" src={n} alt="n" />
-      </div>
-      <div className="panel yellow">
-        <img className="letter l" src={l} alt="l" />
-      </div>
-      <div className="panel black">
-        <img className="letter c" src={c} alt="c" />
-      </div>
+      {letters.map((letter, i) => {
+        return (
+          <div key={i} className={`wrapper ${letter.key}`}>
+            <img className="letter" src={letter.img} alt={letter.key} />
+          </div>
+        )
+      })}
       <Repo />
     </div>
   )

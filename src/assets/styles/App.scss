@@ -74,8 +74,8 @@ body,
     flex-direction: row;
   }
 
-  .panel,
-  .panel > * {
+  .wrapper,
+  .wrapper > * {
     height: 100%;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -83,7 +83,7 @@ body,
     transition: all 1s ease-in-out;
   }
 
-  .panel {
+  .wrapper {
     width: 100%;
     height: 100%;
     flex-grow: 1;
@@ -98,16 +98,16 @@ body,
     &:hover {
       flex-grow: 5;
     }
-    &.cyan {
+    &.g {
       background-color: $cyan;
     }
-    &.magenta {
+    &.n {
       background-color: $magenta;
     }
-    &.yellow {
+    &.l {
       background-color: $yellow;
     }
-    &.black {
+    &.c {
       background-color: $black;
     }
     .letter {
@@ -132,12 +132,12 @@ body,
   box-sizing: border-box;
   text-align: center;
 
-  left: 50%;
   width: 100%;
+  left: 50%;
   transform: translateX(-50%);
   @media screen and (min-width: 768px) {
-    left: initial;
     width: auto;
+    left: 0;
     transform: initial;
     right: 0;
   }

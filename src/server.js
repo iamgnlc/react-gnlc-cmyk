@@ -1,9 +1,10 @@
-import App from "./components/App"
 import React from "react"
 import { StaticRouter } from "react-router-dom"
 import express from "express"
 import { renderToString } from "react-dom/server"
 import { Helmet } from "react-helmet"
+
+import App from "./components/App"
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 
