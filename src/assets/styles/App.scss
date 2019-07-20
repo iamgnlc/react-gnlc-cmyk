@@ -137,7 +137,7 @@ body,
   transform: translateX(-50%);
   @media screen and (min-width: 768px) {
     width: auto;
-    left: 0;
+    left: initial;
     transform: initial;
     right: 0;
   }
