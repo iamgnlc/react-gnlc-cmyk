@@ -3,8 +3,8 @@ import { hotjar } from "react-hotjar"
 
 const HotJar = React.memo(() => {
   return hotjar.initialize(
-    process.env.REACT_APP_HOTJAR_ID,
-    process.env.REACT_APP_HOTJAR_SV,
+    process.env.RAZZLE_HOTJAR_ID,
+    process.env.RAZZLE_HOTJAR_SV,
   )
 })
 

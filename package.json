@@ -7,7 +7,7 @@
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "predeploy": "yarn build",
+    "predeploy": "rm -rf build && rm -rf server && yarn build",
     "deploy": "firebase deploy"
   },
   "dependencies": {
