@@ -4,11 +4,13 @@ import { hydrate } from "react-dom"
 
 import App from "./components/App"
 import HotJar from "./components/HotJar"
+import Repo from "./components/Repo"
 
 hydrate(
   <BrowserRouter>
     <App />
     <HotJar />
+    <Repo />
   </BrowserRouter>,
   document.getElementById("root"),
 )

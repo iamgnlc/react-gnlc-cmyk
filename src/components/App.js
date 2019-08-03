@@ -7,7 +7,6 @@ import l from "../assets/images/l.svg"
 import c from "../assets/images/c.svg"
 
 import Head from "./Head"
-import Repo from "./Repo"
 
 const letters = [
   { key: "g", img: g },
@@ -27,7 +26,6 @@ const App = React.memo(() => {
           </div>
         )
       })}
-      <Repo />
     </div>
   )
 })
