@@ -140,36 +140,13 @@ body,
   }
 
   a {
+    transition: all 0.25s ease-in-out;
     font-size: 3.5vmin;
     font-weight: 300;
-    color: $white;
-    text-shadow: 2px 2px #000;
+    color: #ccc;
+    text-shadow: 1px 1px #000;
+    &:hover {
+      color: $white;
+    }
   }
 }
-// .repo {
-//   transition: all 0.25s ease-in-out;
-//   padding: 0.125rem 0.25rem;
-
-//   bottom: 0;
-//   text-decoration: none;
-//   font-size: 0.775rem;
-//   font-weight: 300;
-//   mix-blend-mode: difference;
-//   color: $white;
-//   opacity: 0;
-//   box-sizing: border-box;
-//   text-align: center;
-
-//   width: 100%;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   @media screen and (min-width: $breakpoint) {
-//     width: auto;
-//     left: initial;
-//     transform: initial;
-//     right: 0;
-//   }
-//   &:hover {
-//     opacity: 1;
-//   }
-// }
