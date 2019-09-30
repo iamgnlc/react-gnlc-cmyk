@@ -26,7 +26,7 @@ class Repo extends Component {
   render() {
     let { show } = this.state
     return (
-      <div className={`repo ${!show ? "hide" : ""}`}>
+      <div className={`repo ${!show ? "hide" : ""}`.trim()}>
         {show && (
           <a
             href={process.env.RAZZLE_REPO_URL}
