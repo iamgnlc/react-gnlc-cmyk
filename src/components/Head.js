@@ -24,6 +24,7 @@ const Head = React.memo(() => {
       />
       <meta name="description" content={process.env.RAZZLE_NAME} />
       <meta name="author" content={process.env.RAZZLE_AUTHOR} />
+
       <meta
         property="og:site_name"
         content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
