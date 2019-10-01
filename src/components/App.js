@@ -22,8 +22,8 @@ const App = React.memo(() => {
       <Head />
       {letters.map((letter, i) => {
         return (
-          <div key={i} className={`wrapper ${letter.key}`}>
-            <img className="letter" src={letter.img} alt={letter.key} />
+          <div key={i} className={`letter ${letter.key}`}>
+            <img src={letter.img} alt={letter.key} />
           </div>
         )
       })}
