@@ -7,53 +7,23 @@ $black: #000000;
 $white: #ffffff;
 $breakpoint: 768px;
 
+@mixin linearGradient($direction) {
+  background: linear-gradient(
+    to $direction,
+    $cyan 0%,
+    $magenta 33%,
+    $yellow 66%,
+    $black 100%
+  );
+}
 @mixin bg {
   background: $black;
-  background: -moz-linear-gradient(
-    top,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, $cyan),
-    color-stop(33%, $magenta),
-    color-stop(66%, $yellow),
-    color-stop(100%, $black)
-  );
-  background: -webkit-linear-gradient(
-    top,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cyan', endColorstr='$black',GradientType=0 );
+  @media (orientation: landscape) {
+    @include linearGradient(right);
+  }
+  @media (orientation: portrait) {
+    @include linearGradient(bottom);
+  }
 }
 @mixin flexCentered {
   display: flex;
