@@ -1,7 +1,5 @@
 import React from "react"
 
-import "animate.css"
-
 import g from "../assets/images/g.svg"
 import n from "../assets/images/n.svg"
 import l from "../assets/images/l.svg"

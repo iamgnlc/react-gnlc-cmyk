@@ -1,5 +1,7 @@
 import React from "react"
 
+import "animate.css"
+
 import "../assets/styles/App.scss"
 
 import Head from "./Head"
