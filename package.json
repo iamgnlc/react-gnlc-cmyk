@@ -1,5 +1,5 @@
 {
-  "name": "my-razzle-app",
+  "name": "cmyk.gnlc.me",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -20,11 +20,14 @@
     "prop-types": "^15.7.2",
     "razzle": "^3.0.0",
     "razzle-plugin-scss": "^3.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-hotjar": "^2.0.0",
     "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.10.2"
   },
   "engines": {
     "node": "10"
