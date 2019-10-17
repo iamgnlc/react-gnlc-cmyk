@@ -12,7 +12,7 @@ import GNLC from "../../components/GNLC"
 describe("GNLC component", () => {
   it("should render without crashing", () => {
     const div = document.createElement("div")
-    ReactDOM.render(<GNLC />, div)
+    ReactDOM.render(<Repo />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 })
