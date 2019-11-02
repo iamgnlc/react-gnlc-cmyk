@@ -2,7 +2,7 @@ import React from "react"
 
 import "animate.css"
 
-import "../assets/styles/App.scss"
+import "../assets/styles/index.scss"
 
 import Head from "./Head"
 import GNLC from "./GNLC"

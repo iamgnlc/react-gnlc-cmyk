@@ -1,43 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
-
-$cyan: #00adef;
-$magenta: #ec008c;
-$yellow: #fff200;
-$black: #000000;
-$white: #ffffff;
-$breakpoint: 768px;
-
-@mixin linearGradient($direction) {
-  background: linear-gradient(
-    to $direction,
-    $cyan 0%,
-    $magenta 33%,
-    $yellow 66%,
-    $black 100%
-  );
-}
-@mixin bg {
-  background: $black;
-  @media (orientation: landscape) {
-    @include linearGradient(right);
-  }
-  @media (orientation: portrait) {
-    @include linearGradient(bottom);
-  }
-}
-@mixin flexCentered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@mixin transitionAll($timing) {
-  transition: all $timing ease-in-out;
-}
-@mixin fullHW {
-  height: 100%;
-  width: 100%;
-}
-
 html,
 body,
 #root {
@@ -111,10 +71,11 @@ body,
     @include transitionAll(0.25s);
     font-size: 3.5vmin;
     font-weight: 300;
-    color: #bbb;
     text-shadow: 1px 1px #000;
+    color: $white;
+    opacity: 0.55;
     &:hover {
-      color: $white;
+      opacity: 1;
       font-size: 4.5vmin;
       font-weight: 500;
     }
