@@ -8,6 +8,9 @@ import App from "./components/App"
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST)
 
+// Regex to disbale Helmet data attribute.
+const regexp = / data-react-helmet="true"/g
+
 const server = express()
 server
   .disable("x-powered-by")
@@ -28,9 +31,9 @@ server
         `<!doctype html>
     <html lang="en" ${helmet.htmlAttributes.toString()}>
     <head>
-        ${helmet.title.toString()}
-        ${helmet.meta.toString()}
-        ${helmet.link.toString()}
+        ${helmet.title.toString().replace(regexp, "")}
+        ${helmet.meta.toString().replace(regexp, "")}
+        ${helmet.link.toString().replace(regexp, "")}
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`
