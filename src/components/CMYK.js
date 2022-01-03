@@ -8,7 +8,7 @@ import Head from "./Head"
 import GNLC from "./GNLC"
 import Repo from "./Repo"
 
-const App = React.memo(() => {
+const CMYK = React.memo(() => {
   return (
     <div className="cmyk">
       <Head />
@@ -18,4 +18,4 @@ const App = React.memo(() => {
   )
 })
 
-export default App
+export default CMYK
