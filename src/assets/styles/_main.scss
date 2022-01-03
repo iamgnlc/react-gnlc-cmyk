@@ -19,8 +19,13 @@ body,
 
   .letter,
   .letter > * {
-    height: 100%;
-    @include transitionAll(1s);
+    @include transitionAll(0.5s);
+    @media (orientation: landscape) {
+      height: 100%;
+    }
+    @media (orientation: portrait) {
+      width: 100%;
+    }
   }
 
   .letter {

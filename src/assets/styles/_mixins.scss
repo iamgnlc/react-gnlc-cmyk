@@ -7,6 +7,7 @@
     $black 100%
   );
 }
+
 @mixin bg {
   background: $black;
   @media (orientation: landscape) {
@@ -16,14 +17,17 @@
     @include linearGradient(bottom);
   }
 }
+
 @mixin flexCentered {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @mixin transitionAll($timing) {
   transition: all $timing ease-in-out;
 }
+
 @mixin fullHW {
   height: 100%;
   width: 100%;
