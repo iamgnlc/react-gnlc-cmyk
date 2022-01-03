@@ -8,7 +8,7 @@ const Head = React.memo(() => {
   return (
     <Helmet>
       <title>
-        {`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        {`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       </title>
       <link rel="shortcut icon" href={favicon} />
       <meta name="robots" content="noindex" />
@@ -19,33 +19,33 @@ const Head = React.memo(() => {
       />
       <meta
         name="title"
-        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        content={`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       />
-      <meta name="description" content={process.env.RAZZLE_NAME} />
-      <meta name="author" content={process.env.RAZZLE_AUTHOR} />
+      <meta name="description" content={process.env.REACT_APP_NAME} />
+      <meta name="author" content={process.env.REACT_APP_AUTHOR} />
 
       <meta
         property="og:site_name"
-        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        content={`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       />
       <meta
         property="og:title"
-        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        content={`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       />
-      <meta property="og:description" content={process.env.RAZZLE_NAME} />
+      <meta property="og:description" content={process.env.REACT_APP_NAME} />
       <meta property="og:image" content={preview} />
 
       <meta
         name="twitter:title"
-        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        content={`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       />
-      <meta name="twitter:description" content={process.env.RAZZLE_NAME} />
+      <meta name="twitter:description" content={process.env.REACT_APP_NAME} />
       <meta name="twitter:image" content={preview} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={`@${process.env.RAZZLE_AUTHOR}`} />
+      <meta name="twitter:site" content={`@${process.env.REACT_APP_AUTHOR}`} />
       <meta
         name="twitter:image:alt"
-        content={`${process.env.RAZZLE_AUTHOR} / ${process.env.RAZZLE_NAME}`}
+        content={`${process.env.REACT_APP_AUTHOR} / ${process.env.REACT_APP_NAME}`}
       />
 
       <meta name="mobile-web-app-capable" content="yes" />

@@ -29,11 +29,11 @@ class Repo extends Component {
       <div className={`repo ${!show ? "hide" : ""}`.trim()}>
         {show && (
           <a
-            href={process.env.RAZZLE_REPO_URL}
+            href={process.env.REACT_APP_REPO_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {process.env.RAZZLE_REPO_URL}
+            {process.env.REACT_APP_REPO_URL}
           </a>
         )}
       </div>

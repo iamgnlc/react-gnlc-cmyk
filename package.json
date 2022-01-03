@@ -1,35 +1,49 @@
 {
   "name": "cmyk.gnlc.me",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "@fvilers/disable-react-devtools": "^1.2.1",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-cache-buster": "^0.1.6",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-loading": "^2.0.3",
+    "react-scripts": "3.4.1",
+    "react-spa-prerender": "^1.0.12"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
+  },
   "scripts": {
-    "start": "razzle start",
-    "build": "razzle build",
-    "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js",
+    "generate-meta-tag": "node ./node_modules/react-cache-buster/dist/generate-meta-tag.js",
+    "start": "PORT=3035 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "postbuild": "react-spa-prerender",
+    "prebuild": "yarn generate-meta-tag",
     "predeploy": "rm -rf build && rm -rf server && yarn build",
     "deploy": "firebase deploy"
   },
-  "dependencies": {
-    "@sentry/browser": "^5.5.0",
-    "animate.css": "^3.7.2",
-    "express": "^4.17.1",
-    "firebase-admin": "^8.2.0",
-    "firebase-functions": "^3.1.0",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
-    "razzle": "^3.0.0",
-    "razzle-plugin-scss": "^3.0.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1",
-    "react-hotjar": "^2.0.0",
-    "react-router-dom": "^5.0.1"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "devDependencies": {
-    "react-test-renderer": "^16.10.2"
-  },
-  "engines": {
-    "node": "10"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

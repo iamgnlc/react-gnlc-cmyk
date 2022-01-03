@@ -1,38 +1,22 @@
-import http from "http"
-import * as Sentry from "@sentry/browser"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
-let app = require("./server").default
+import App from './App';
 
-const server = http.createServer(app)
+import * as serviceWorker from './serviceWorker';
 
-let currentApp = app
+if (['production'].includes(process.env.NODE_ENV)) disableReactDevTools();
 
-// Sentry.
-Sentry.init({
-  dsn: `https://${process.env.RAZZLE_SENTRY_KEY}@sentry.io/${process.env.RAZZLE_SENTRY_PID}`,
-})
+const rootElement = document.getElementById('root');
 
-server.listen(process.env.PORT || 3000, (error) => {
-  if (error) {
-    console.log(error)
-  }
-
-  console.log("🚀 started")
-})
-
-if (module.hot) {
-  console.log("✅  Server-side HMR Enabled!")
-
-  module.hot.accept("./server", () => {
-    console.log("🔁  HMR Reloading `./server`...")
-
-    try {
-      app = require("./server").default
-      server.removeListener("request", currentApp)
-      server.on("request", app)
-      currentApp = app
-    } catch (error) {
-      console.error(error)
-    }
-  })
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(<App />, rootElement);
+} else {
+  ReactDOM.render(<App />, rootElement);
 }
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.register();

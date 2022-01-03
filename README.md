@@ -2,29 +2,30 @@
 
 # GNLC/CMYK
 
-GNLC React animated logo. Using Razzle for SSR.
+GNLC React animated logo.
 
 ### Install
 
 ```
-$ yarn install
-$ yarn start
+yarn install
+
+yarn start
 ```
 
 ### Test
 
 ```
-$ yarn test
+yarn test
 ```
 
 ### Deploy
 
 ```
-$ yarn deploy
+yarn deploy
 ```
 
 ### Open
 
 ```
-http://localhost:3003/
+http://localhost:3035/
 ```
