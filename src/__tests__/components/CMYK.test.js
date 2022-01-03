@@ -1,12 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import App from "../../components/App"
+import CMYK from "../../components/CMYK"
 
-describe("App component", () => {
+describe("CMYK component", () => {
   it("should render without crashing", () => {
     const div = document.createElement("div")
-    ReactDOM.render(<App />, div)
+    ReactDOM.render(<CMYK />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 })
