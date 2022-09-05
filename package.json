@@ -1,11 +1,10 @@
 {
   "name": "cmyk.gnlc.me",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "dependencies": {
-    "animate.css": "^3.7.2",
     "@fvilers/disable-react-devtools": "^1.2.1",
-    "node-sass": "^4.13.0",
+    "animate.css": "^3.7.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-cache-buster": "^0.1.6",
@@ -19,17 +18,19 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "@testing-library/user-event": "^7.1.2",
+    "sass": "^1.54.8"
   },
   "scripts": {
-    "generate-meta-tag": "node ./node_modules/react-cache-buster/dist/generate-meta-tag.js",
-    "start": "PORT=3035 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "clean": "rm -rf build && rm -rf server",
+    "deploy": "firebase deploy",
+    "generate-meta-tag": "node ./node_modules/react-cache-buster/dist/generate-meta-tag.js",
     "postbuild": "react-spa-prerender",
     "prebuild": "yarn generate-meta-tag",
-    "predeploy": "rm -rf build && rm -rf server && yarn build",
-    "deploy": "firebase deploy"
+    "predeploy": "yarn clean && yarn version --patch && yarn build",
+    "start": "PORT=3035 react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
