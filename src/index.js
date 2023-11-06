@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 if (['production'].includes(process.env.NODE_ENV)) disableReactDevTools();
 
-const rootElement = document.getElementById('root');
+const rootElement = document?.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 
 const Root = () => (
@@ -18,7 +18,7 @@ const Root = () => (
 );
 
 if (rootElement.hasChildNodes()) {
-  hydrateRoot(<Root />, rootElement);
+  hydrateRoot(rootElement, <Root />);
 } else {
   root.render(<Root />);
 }
