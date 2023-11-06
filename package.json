@@ -1,6 +1,6 @@
 {
   "name": "cmyk.gnlc.me",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "dependencies": {
     "@fvilers/disable-react-devtools": "^1.2.1",
