@@ -1,12 +1,12 @@
-import React from "react"
+import React from 'react';
 
-import "animate.css"
+import 'animate.css';
 
-import "../assets/styles/index.scss"
+import '../assets/styles/index.scss';
 
-import Head from "./Head"
-import GNLC from "./GNLC"
-import Repo from "./Repo"
+import Head from './Head';
+import GNLC from './GNLC';
+import Repo from './Repo';
 
 const CMYK = React.memo(() => {
   return (
@@ -15,7 +15,9 @@ const CMYK = React.memo(() => {
       <GNLC />
       <Repo />
     </div>
-  )
-})
+  );
+});
 
-export default CMYK
+CMYK.displayName = 'CMYK';
+
+export default CMYK;

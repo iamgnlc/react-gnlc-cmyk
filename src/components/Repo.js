@@ -1,32 +1,34 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
 class Repo extends Component {
-  state = { show: null }
+  displayName = 'Repo';
 
-  keys = [17, 91, 93, 224]
+  state = { show: null };
+
+  keys = [17, 91, 93, 224];
 
   handleKeyDown = (event) => {
-    this.keys.includes(event.keyCode) && this.setState({ show: true })
-  }
+    this.keys.includes(event.keyCode) && this.setState({ show: true });
+  };
 
   handleKeyUp = (event) => {
-    this.keys.includes(event.keyCode) && this.setState({ show: false })
-  }
+    this.keys.includes(event.keyCode) && this.setState({ show: false });
+  };
 
   componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown)
-    document.addEventListener("keyup", this.handleKeyUp)
+    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keyup', this.handleKeyUp);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown)
-    document.removeEventListener("keyup", this.handleKeyUp)
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keyup', this.handleKeyUp);
   }
 
   render() {
-    let { show } = this.state
+    let { show } = this.state;
     return (
-      <div className={`repo ${!show ? "hide" : ""}`.trim()}>
+      <div className={`repo ${!show ? 'hide' : ''}`.trim()}>
         {show && (
           <a
             href={process.env.REACT_APP_REPO_URL}
@@ -37,8 +39,8 @@ class Repo extends Component {
           </a>
         )}
       </div>
-    )
+    );
   }
 }
 
-export default Repo
+export default Repo;
