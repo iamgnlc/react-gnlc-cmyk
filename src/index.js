@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM, { hydrateRoot } from 'react-dom/client';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
 import App from './App';
@@ -18,7 +18,7 @@ const Root = () => (
 );
 
 if (rootElement.hasChildNodes()) {
-  root.hydrate(<Root />);
+  hydrateRoot(<Root />, rootElement);
 } else {
   root.render(<Root />);
 }
