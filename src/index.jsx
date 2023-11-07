@@ -3,10 +3,13 @@ import ReactDOM, { hydrateRoot } from 'react-dom/client';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
 import App from './App';
+import { isEnv, logo } from './utils';
 
 import * as serviceWorker from './serviceWorker';
 
-if (['production'].includes(process.env.NODE_ENV)) disableReactDevTools();
+logo();
+
+if (isEnv('production')) disableReactDevTools();
 
 const rootElement = document?.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
