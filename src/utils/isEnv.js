@@ -1,2 +1,1 @@
-export const isEnv = (env: string): boolean =>
-  [env].includes(process.env.NODE_ENV);
+export const isEnv = (env) => [env].includes(process.env.NODE_ENV);

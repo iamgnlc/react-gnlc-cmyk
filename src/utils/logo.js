@@ -8,6 +8,6 @@ const ascii = `
     \\|_______|\\|__|     \\|__|\\___/ /        \\|__| \\|__|
                             \\|___|/`;
 
-export const logo = (): void => {
+export const logo = () => {
   console.info(ascii);
 };
