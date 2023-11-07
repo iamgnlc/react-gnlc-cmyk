@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Head should render correctly 1`] = `
+Array [
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      GNLC / CMYK
+    </title>
+    <link
+      href="favicon.ico"
+      rel="shortcut icon"
+    />
+    <meta
+      content="noindex"
+      name="robots"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui"
+      name="viewport"
+    />
+    <meta
+      content="GNLC / CMYK"
+      name="title"
+    />
+    <meta
+      content="CMYK"
+      name="description"
+    />
+    <meta
+      content="GNLC"
+      name="author"
+    />
+    <meta
+      content="GNLC / CMYK"
+      property="og:site_name"
+    />
+    <meta
+      content="GNLC / CMYK"
+      property="og:title"
+    />
+    <meta
+      content="CMYK"
+      property="og:description"
+    />
+    <meta
+      content="preview.png"
+      property="og:image"
+    />
+    <meta
+      content="GNLC / CMYK"
+      name="twitter:title"
+    />
+    <meta
+      content="CMYK"
+      name="twitter:description"
+    />
+    <meta
+      content="preview.png"
+      name="twitter:image"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@GNLC"
+      name="twitter:site"
+    />
+    <meta
+      content="GNLC / CMYK"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="yes"
+      name="apple-mobile-web-app-capable"
+    />
+    <meta
+      content="black"
+      name="apple-mobile-web-app-status-bar-style"
+    />
+  </HelmetWrapper>,
+]
+`;

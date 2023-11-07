@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GNLC should render correctly 1`] = `
+<div>
+  <div
+    class="animated fadeInRight letter g"
+  >
+    <img
+      alt="g"
+      class="animated fadeInLeft"
+      src="g.svg"
+    />
+  </div>
+  <div
+    class="animated fadeInRight letter n"
+  >
+    <img
+      alt="n"
+      class="animated fadeInLeft"
+      src="n.svg"
+    />
+  </div>
+  <div
+    class="animated fadeInRight letter l"
+  >
+    <img
+      alt="l"
+      class="animated fadeInLeft"
+      src="l.svg"
+    />
+  </div>
+  <div
+    class="animated fadeInRight letter c"
+  >
+    <img
+      alt="c"
+      class="animated fadeInLeft"
+      src="c.svg"
+    />
+  </div>
+</div>
+`;
