@@ -1,4 +1,4 @@
-import { logo } from '../';
+import { logo } from '../../utils';
 
 describe('logo', () => {
   test('should rendere in console', () => {

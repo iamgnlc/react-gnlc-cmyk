@@ -6,11 +6,11 @@ exports[`Repo should render correctly showing 1`] = `
     class="repo"
   >
     <a
-      href="https://github.com/iamgnlc"
+      href="github url"
       rel="noopener noreferrer"
       target="_blank"
     >
-      https://github.com/iamgnlc
+      github url
     </a>
   </div>
 </div>

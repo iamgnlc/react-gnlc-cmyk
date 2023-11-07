@@ -7,7 +7,7 @@ Array [
     encodeSpecialCharacters={true}
   >
     <title>
-      GNLC / CMYK
+      Author / Name
     </title>
     <link
       href="favicon.ico"
@@ -25,27 +25,27 @@ Array [
       name="viewport"
     />
     <meta
-      content="GNLC / CMYK"
+      content="Author / Name"
       name="title"
     />
     <meta
-      content="CMYK"
+      content="Name"
       name="description"
     />
     <meta
-      content="GNLC"
+      content="Author"
       name="author"
     />
     <meta
-      content="GNLC / CMYK"
+      content="Author / Name"
       property="og:site_name"
     />
     <meta
-      content="GNLC / CMYK"
+      content="Author / Name"
       property="og:title"
     />
     <meta
-      content="CMYK"
+      content="Name"
       property="og:description"
     />
     <meta
@@ -53,11 +53,11 @@ Array [
       property="og:image"
     />
     <meta
-      content="GNLC / CMYK"
+      content="Author / Name"
       name="twitter:title"
     />
     <meta
-      content="CMYK"
+      content="Name"
       name="twitter:description"
     />
     <meta
@@ -69,11 +69,11 @@ Array [
       name="twitter:card"
     />
     <meta
-      content="@GNLC"
+      content="@Author"
       name="twitter:site"
     />
     <meta
-      content="GNLC / CMYK"
+      content="Author / Name"
       name="twitter:image:alt"
     />
     <meta

@@ -1,4 +1,4 @@
-import { isEnv } from '../';
+import { isEnv } from '../../utils';
 
 describe('isEnv', () => {
   const originalEnv = process.env;

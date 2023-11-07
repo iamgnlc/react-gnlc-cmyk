@@ -5,11 +5,16 @@ import { act } from 'react-dom/test-utils';
 import Repo from '../../components/Repo';
 
 describe('Repo', () => {
+  beforeEach(() => {
+    process.env.REACT_APP_REPO_URL = 'github url';
+  });
+
   it('should render correctly without showing', () => {
     const view = render(<Repo />);
 
     expect(view.container).toMatchSnapshot();
   });
+
   it('should render correctly showing', () => {
     const view = render(<Repo />);
 

@@ -1,46 +1,56 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
-class Repo extends Component {
-  displayName = 'Repo';
+const Repo = React.memo(() => {
+  const [show, setShow] = useState(false);
 
-  state = { show: null };
+  const keys = [17, 91, 93, 224];
 
-  keys = [17, 91, 93, 224];
+  const handleKeyDown = useCallback(
+    (event) => {
+      keys.includes(event.keyCode) && setShow(true);
+    },
+    [keys],
+  );
 
-  handleKeyDown = (event) => {
-    this.keys.includes(event.keyCode) && this.setState({ show: true });
-  };
+  const handleKeyUp = useCallback(
+    (event) => {
+      keys.includes(event.keyCode) && setShow(false);
+    },
+    [keys],
+  );
 
-  handleKeyUp = (event) => {
-    this.keys.includes(event.keyCode) && this.setState({ show: false });
-  };
+  const addEvent = useCallback(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+  }, [handleKeyDown, handleKeyUp]);
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyDown);
-    document.addEventListener('keyup', this.handleKeyUp);
-  }
+  const removeEvent = useCallback(() => {
+    document.removeEventListener('keydown', handleKeyDown);
+    document.removeEventListener('keyup', handleKeyUp);
+  }, [handleKeyDown, handleKeyUp]);
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown);
-    document.removeEventListener('keyup', this.handleKeyUp);
-  }
+  useEffect(() => {
+    addEvent();
+    return () => {
+      removeEvent();
+    };
+  }, [addEvent, removeEvent]);
 
-  render() {
-    let { show } = this.state;
-    return (
-      <div className={`repo ${!show ? 'hide' : ''}`.trim()}>
-        {show && (
-          <a
-            href={process.env.REACT_APP_REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {process.env.REACT_APP_REPO_URL}
-          </a>
-        )}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={`repo ${!show ? 'hide' : ''}`.trim()}>
+      {show && (
+        <a
+          href={process.env.REACT_APP_REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {process.env.REACT_APP_REPO_URL}
+        </a>
+      )}
+    </div>
+  );
+});
+
+Repo.displayName = 'Repo';
 
 export default Repo;
