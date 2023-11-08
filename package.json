@@ -1,11 +1,10 @@
 {
   "name": "cmyk.gnlc.me",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "license": "MIT",
   "dependencies": {
     "@fvilers/disable-react-devtools": "^1.2.1",
-    "animate.css": "^3.7.2",
-    "prop-types": "^15.7.2",
+    "animate.css": "^4.1.1",
     "react": "^18.0.2",
     "react-cache-buster": "^0.1.6",
     "react-dom": "^18.0.2",
@@ -13,7 +12,7 @@
     "react-icons": "^4.3.1",
     "react-loading": "^2.0.3",
     "react-scripts": "3.4.1",
-    "react-spa-prerender": "^1.0.12"
+    "react-spa-prerender": "^1.0.14"
   },
   "devDependencies": {
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
