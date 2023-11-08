@@ -31,7 +31,8 @@
     "prebuild": "yarn generate-meta-tag",
     "predeploy": "yarn clean && yarn version --patch && yarn build",
     "start": "PORT=3035 react-scripts start",
-    "test": "react-scripts test --verbose --color"
+    "test": "react-scripts test --verbose --color",
+    "test:cov": "CI=true react-scripts test --verbose --coverage --color"
   },
   "eslintConfig": {
     "extends": "react-app"

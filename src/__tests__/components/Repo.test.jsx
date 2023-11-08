@@ -12,6 +12,11 @@ describe('Repo', () => {
   it('should render correctly without showing', () => {
     const view = render(<Repo />);
 
+    act(() => {
+      const event = new KeyboardEvent('keyup', { keyCode: 93 });
+      document.dispatchEvent(event);
+    });
+
     expect(view.container).toMatchSnapshot();
   });
 
