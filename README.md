@@ -21,7 +21,7 @@ yarn test
 ### Deploy
 
 ```
-yarn deploy
+yarn ci
 ```
 
 ### Open
