@@ -1,0 +1,32 @@
+.repo {
+  @include flexCentered;
+  @include transitionAll(0.125s);
+  @include fullHW;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba($black, 0.85);
+  backdrop-filter: blur(25px) saturate(0);
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  a {
+    @include transitionAll(0.25s);
+    font-size: 3.5vmin;
+    font-weight: 300;
+    text-shadow: 1px 1px #000;
+    color: $white;
+    opacity: 0.55;
+    &:hover {
+      opacity: 1;
+      font-size: 6.5vmin;
+      font-weight: 500;
+    }
+  }
+}
