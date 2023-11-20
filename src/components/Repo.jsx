@@ -1,23 +1,17 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { memo, useState, useEffect, useCallback } from 'react';
 
-const Repo = React.memo(() => {
+const keys = [17, 91, 93, 224];
+
+const Repo = memo(() => {
   const [show, setShow] = useState(false);
 
-  const keys = [17, 91, 93, 224];
+  const handleKeyDown = useCallback((event) => {
+    keys.includes(event.keyCode) && setShow(true);
+  }, []);
 
-  const handleKeyDown = useCallback(
-    (event) => {
-      keys.includes(event.keyCode) && setShow(true);
-    },
-    [keys],
-  );
-
-  const handleKeyUp = useCallback(
-    (event) => {
-      keys.includes(event.keyCode) && setShow(false);
-    },
-    [keys],
-  );
+  const handleKeyUp = useCallback((event) => {
+    keys.includes(event.keyCode) && setShow(false);
+  }, []);
 
   const addEvent = useCallback(() => {
     document.addEventListener('keydown', handleKeyDown);

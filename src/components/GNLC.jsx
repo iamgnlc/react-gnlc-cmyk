@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import g from '../assets/images/g.svg';
 import n from '../assets/images/n.svg';
@@ -12,7 +12,7 @@ const letters = [
   { key: 'c', img: c },
 ];
 
-const Letter = React.memo(({ letter }) => (
+const Letter = memo(({ letter }) => (
   <img src={letter.img} alt={letter.key} className="animated fadeInLeft" />
 ));
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import 'animate.css';
 
@@ -8,7 +8,7 @@ import Head from './Head';
 import GNLC from './GNLC';
 import Repo from './Repo';
 
-const CMYK = React.memo(() => {
+const CMYK = memo(() => {
   return (
     <div className="cmyk">
       <Head />

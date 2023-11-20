@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Helmet from 'react-helmet';
 
 import preview from '../assets/images/preview.png';
 import favicon from '../assets/favicon.ico';
 
-const Head = React.memo(() => {
+const Head = memo(() => {
   return (
     <Helmet>
       <title>
