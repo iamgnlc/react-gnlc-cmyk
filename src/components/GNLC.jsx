@@ -12,8 +12,15 @@ const letters = [
   { key: 'c', img: c },
 ];
 
+const ANIMATED_PREFIX = 'animate__';
+const ANIMATED_MAIN_CLASS = `${ANIMATED_PREFIX}animated`;
+
 const Letter = memo(({ letter }) => (
-  <img src={letter.img} alt={letter.key} className="animated fadeInLeft" />
+  <img
+    src={letter.img}
+    alt={letter.key}
+    className={`${ANIMATED_MAIN_CLASS} ${ANIMATED_PREFIX}fadeInLeft`}
+  />
 ));
 
 Letter.displayName = 'Letter';
@@ -23,7 +30,7 @@ const GNLC = React.memo(() => {
     return (
       <div
         key={`${letter.key}-${i}`}
-        className={`animated fadeInRight letter ${letter.key}`}
+        className={`${ANIMATED_MAIN_CLASS} ${ANIMATED_PREFIX}fadeInRight letter ${letter.key}`}
       >
         <Letter letter={letter} />
       </div>

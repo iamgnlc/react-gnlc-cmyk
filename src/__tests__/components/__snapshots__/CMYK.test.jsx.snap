@@ -6,38 +6,38 @@ exports[`CMYK should render correctly 1`] = `
     class="cmyk"
   >
     <div
-      class="animated fadeInRight letter g"
+      class="animate__animated animate__fadeInRight letter g"
     >
       <img
         alt="g"
-        class="animated fadeInLeft"
+        class="animate__animated animate__fadeInLeft"
         src="g.svg"
       />
     </div>
     <div
-      class="animated fadeInRight letter n"
+      class="animate__animated animate__fadeInRight letter n"
     >
       <img
         alt="n"
-        class="animated fadeInLeft"
+        class="animate__animated animate__fadeInLeft"
         src="n.svg"
       />
     </div>
     <div
-      class="animated fadeInRight letter l"
+      class="animate__animated animate__fadeInRight letter l"
     >
       <img
         alt="l"
-        class="animated fadeInLeft"
+        class="animate__animated animate__fadeInLeft"
         src="l.svg"
       />
     </div>
     <div
-      class="animated fadeInRight letter c"
+      class="animate__animated animate__fadeInRight letter c"
     >
       <img
         alt="c"
-        class="animated fadeInLeft"
+        class="animate__animated animate__fadeInLeft"
         src="c.svg"
       />
     </div>
