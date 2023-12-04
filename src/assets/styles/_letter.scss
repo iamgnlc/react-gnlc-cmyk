@@ -1,6 +1,9 @@
+$animationTiming: 1s;
+
 .letter,
 .letter > * {
   @include transitionAll(0.5s);
+
   @media (orientation: landscape) {
     height: 100%;
   }
@@ -32,5 +35,25 @@
   }
   &.c {
     background-color: $black;
+  }
+
+  @media (orientation: landscape) {
+    animation: fadeInRight;
+    animation-duration: $animationTiming;
+  }
+  @media (orientation: portrait) {
+    animation: fadeInUp;
+    animation-duration: $animationTiming;
+  }
+
+  img {
+    @media (orientation: landscape) {
+      animation: fadeInLeft;
+      animation-duration: $animationTiming;
+    }
+    @media (orientation: portrait) {
+      animation: fadeInDown;
+      animation-duration: $animationTiming;
+    }
   }
 }

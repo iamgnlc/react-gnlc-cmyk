@@ -12,26 +12,14 @@ const letters = [
   { key: 'c', img: c },
 ];
 
-const ANIMATED_PREFIX = 'animate__';
-const ANIMATED_MAIN_CLASS = `${ANIMATED_PREFIX}animated`;
-
-const Letter = memo(({ letter }) => (
-  <img
-    src={letter.img}
-    alt={letter.key}
-    className={`${ANIMATED_MAIN_CLASS} ${ANIMATED_PREFIX}fadeInLeft`}
-  />
-));
+const Letter = memo(({ letter }) => <img src={letter.img} alt={letter.key} />);
 
 Letter.displayName = 'Letter';
 
 const GNLC = React.memo(() => {
   return letters.map((letter, i) => {
     return (
-      <div
-        key={`${letter.key}-${i}`}
-        className={`${ANIMATED_MAIN_CLASS} ${ANIMATED_PREFIX}fadeInRight letter ${letter.key}`}
-      >
+      <div key={`${letter.key}-${i}`} className={`letter ${letter.key}`}>
         <Letter letter={letter} />
       </div>
     );
