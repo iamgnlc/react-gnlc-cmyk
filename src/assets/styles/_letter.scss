@@ -2,8 +2,6 @@ $animationTiming: 1s;
 
 .letter,
 .letter > * {
-  @include transitionAll(0.5s);
-
   @media (orientation: landscape) {
     height: 100%;
   }
