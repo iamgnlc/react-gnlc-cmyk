@@ -1,12 +1,15 @@
-import React from 'react';
+import { act } from 'react';
 import { render } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
 
 import Repo from '../../components/Repo';
 
 describe('Repo', () => {
   beforeEach(() => {
-    process.env.REACT_APP_REPO_URL = 'github url';
+    vi.stubEnv('VITE_REPO_URL', 'github url');
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
   });
 
   it('should render correctly without showing', () => {

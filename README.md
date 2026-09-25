@@ -1,31 +1,65 @@
-![CMYK](preview.png?raw=true "CMYK")
+![CMYK](preview.png?raw=true 'CMYK')
 
 # GNLC/CMYK
 
 GNLC React animated logo.
 
+Built with Vite + React 19. Tests run with Vitest + React Testing Library.
+
 ### Install
 
 ```
-yarn install
+npm install
+```
 
-yarn start
+### Env
+
+The app reads `VITE_*` vars from `.env` (via `import.meta.env`):
+
+```
+VITE_AUTHOR=GNLC
+VITE_NAME=CMYK
+VITE_REPO_URL=https://github.com/iamgnlc
+```
+
+### Develop
+
+```
+npm run dev
 ```
 
 ### Test
 
 ```
-yarn test
+npm test
+```
+
+With coverage:
+
+```
+npm run test:cov
+```
+
+### Build
+
+```
+npm run build
+```
+
+Preview the production build:
+
+```
+npm run preview
 ```
 
 ### Deploy
 
 ```
-yarn ci
+npm run ci
 ```
 
 ### Open
 
 ```
-http://localhost:3035/
+http://localhost:3033/
 ```

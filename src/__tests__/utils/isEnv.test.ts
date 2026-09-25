@@ -1,18 +1,13 @@
 import { isEnv } from '../../utils';
 
 describe('isEnv', () => {
-  const originalEnv = process.env;
-
   beforeEach(() => {
-    jest.resetModules();
-    process.env = {
-      ...originalEnv,
-      NODE_ENV: 'production',
-    };
+    vi.resetModules();
+    vi.stubEnv('MODE', 'production');
   });
 
   afterEach(() => {
-    process.env = originalEnv;
+    vi.unstubAllEnvs();
   });
 
   it('should return true with correct environment', () => {

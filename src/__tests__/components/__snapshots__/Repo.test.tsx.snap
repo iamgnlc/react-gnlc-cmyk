@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Repo should render correctly showing 1`] = `
+exports[`Repo > should render correctly showing 1`] = `
 <div>
   <div
     class="repo"
@@ -16,7 +16,7 @@ exports[`Repo should render correctly showing 1`] = `
 </div>
 `;
 
-exports[`Repo should render correctly without showing 1`] = `
+exports[`Repo > should render correctly without showing 1`] = `
 <div>
   <div
     class="repo hide"

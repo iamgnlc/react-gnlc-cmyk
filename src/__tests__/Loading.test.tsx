@@ -1,11 +1,10 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 
-import GNLC from '../../components/GNLC';
+import Loading from '../Loading';
 
-describe('GNLC', () => {
+describe('Loading', () => {
   it('should render correctly', () => {
-    const view = render(<GNLC />);
+    const view = render(<Loading />);
 
     expect(view.container).toMatchSnapshot();
   });

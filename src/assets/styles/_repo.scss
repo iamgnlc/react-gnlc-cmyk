@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 .repo {
   @include flexCentered;
   @include transitionAll(0.125s);
@@ -23,9 +26,10 @@
     text-shadow: 1px 1px #000;
     color: $white;
     opacity: 0.55;
+
     &:hover {
       opacity: 1;
-      font-size: 6.5vmin;
+      font-size: 6.75vmin;
       font-weight: 500;
     }
   }

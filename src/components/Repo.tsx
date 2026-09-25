@@ -1,16 +1,17 @@
-import React, { memo, useState, useEffect, useCallback } from 'react';
+import { memo, useState, useEffect, useCallback } from 'react';
 
 const keys = [17, 91, 93, 224];
 
 const Repo = memo(() => {
+  const repoUrl = import.meta.env.VITE_REPO_URL;
   const [show, setShow] = useState(false);
 
-  const handleKeyDown = useCallback((event) => {
-    keys.includes(event.keyCode) && setShow(true);
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (keys.includes(event.keyCode)) setShow(true);
   }, []);
 
-  const handleKeyUp = useCallback((event) => {
-    keys.includes(event.keyCode) && setShow(false);
+  const handleKeyUp = useCallback((event: KeyboardEvent) => {
+    if (keys.includes(event.keyCode)) setShow(false);
   }, []);
 
   const addEvent = useCallback(() => {
@@ -33,12 +34,8 @@ const Repo = memo(() => {
   return (
     <div className={`repo ${!show ? 'hide' : ''}`.trim()}>
       {show && (
-        <a
-          href={process.env.REACT_APP_REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {process.env.REACT_APP_REPO_URL}
+        <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+          {repoUrl}
         </a>
       )}
     </div>

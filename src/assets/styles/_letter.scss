@@ -1,54 +1,59 @@
-.letter,
-.letter > * {
-  @include transitionAll(0.5s);
+@use "variables" as *;
+@use "mixins" as *;
 
-  @media (orientation: landscape) {
-    height: 100%;
-  }
-  @media (orientation: portrait) {
-    width: 100%;
-  }
-}
+.cmyk {
+  .letter,
+  .letter > * {
+    @include transitionAll(0.5s);
 
-.letter {
-  @include flexCentered;
-  width: 100%;
-  flex-grow: 1;
-  flex-basis: 0;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
-
-  &:hover {
-    flex-grow: 5;
-  }
-  &.g {
-    background-color: $cyan;
-  }
-  &.n {
-    background-color: $magenta;
-  }
-  &.l {
-    background-color: $yellow;
-  }
-  &.c {
-    background-color: $black;
-  }
-
-  @media (orientation: landscape) {
-    @include anim(fadeInRight, $animationTiming);
-  }
-  @media (orientation: portrait) {
-    @include anim(fadeInUp, $animationTiming);
-  }
-
-  img {
-    
     @media (orientation: landscape) {
-      @include anim(fadeInLeft, $animationTiming);
+      height: 100%;
     }
     @media (orientation: portrait) {
-      @include anim(fadeInDown, $animationTiming);
+      width: 100%;
+    }
+  }
+
+  .letter {
+    @include flexCentered;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      flex-grow: 5;
+    }
+
+    &.g {
+      background-color: $cyan;
+    }
+    &.n {
+      background-color: $magenta;
+    }
+    &.l {
+      background-color: $yellow;
+    }
+    &.c {
+      background-color: $black;
+    }
+
+    @media (orientation: landscape) {
+      @include anim(fadeInRight, $animationTiming);
+    }
+    @media (orientation: portrait) {
+      @include anim(fadeInUp, $animationTiming);
+    }
+
+    img {
+      @media (orientation: landscape) {
+        @include anim(fadeInLeft, $animationTiming);
+      }
+      @media (orientation: portrait) {
+        @include anim(fadeInDown, $animationTiming);
+      }
     }
   }
 }
