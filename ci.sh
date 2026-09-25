@@ -22,7 +22,7 @@ cout "*** Clean old build ***"
 npm run clean
 
 cout "*** Set version ***"
-npm run version --patch
+npm version --patch
 npm run generate-meta-tag
 
 cout "*** Build ***"
