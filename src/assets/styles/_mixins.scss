@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin linearGradient($direction) {
   background: linear-gradient(
     to $direction,
@@ -31,4 +33,9 @@
 @mixin fullHW {
   height: 100%;
   width: 100%;
+}
+
+@mixin anim($name, $duration) {
+  animation: $name;
+  animation-duration: $duration;
 }

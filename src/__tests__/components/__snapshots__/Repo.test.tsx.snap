@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Repo > should render correctly showing 1`] = `
+<div>
+  <div
+    class="repo"
+  >
+    <a
+      href="github url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      github url
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Repo > should render correctly without showing 1`] = `
+<div>
+  <div
+    class="repo hide"
+  />
+</div>
+`;
