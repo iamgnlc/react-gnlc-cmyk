@@ -2,7 +2,7 @@ import { logo } from '../../utils';
 
 describe('logo', () => {
   test('should rendere in console', () => {
-    const infoSpy = jest.spyOn(global.console, 'info');
+    const infoSpy = vi.spyOn(console, 'info');
 
     logo();
 

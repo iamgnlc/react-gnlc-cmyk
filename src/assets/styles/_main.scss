@@ -1,3 +1,7 @@
+@use "mixins" as *;
+@use "letter";
+@use "repo";
+
 html,
 body,
 #root {
@@ -6,17 +10,16 @@ body,
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   @include bg;
 }
+
 .cmyk {
   @include fullHW;
   margin: 0;
   display: flex;
+
   @media (orientation: landscape) {
     flex-direction: row;
   }
   @media (orientation: portrait) {
     flex-direction: column;
   }
-
-  @import "letter";
 }
-@import "repo";

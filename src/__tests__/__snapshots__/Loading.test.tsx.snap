@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Loading should render correctly 1`] = `
+exports[`Loading > should render correctly 1`] = `
 <div>
   <div
     style="fill: #ddd; height: 64px; width: 64px;"
@@ -17,7 +17,7 @@ exports[`Loading should render correctly 1`] = `
         r="0"
         transform="translate(8 0)"
       >
-         
+        
     
         <animate
           attributeName="r"
@@ -40,7 +40,7 @@ exports[`Loading should render correctly 1`] = `
         r="0"
         transform="translate(16 0)"
       >
-         
+        
     
         <animate
           attributeName="r"
@@ -63,7 +63,7 @@ exports[`Loading should render correctly 1`] = `
         r="0"
         transform="translate(24 0)"
       >
-         
+        
     
         <animate
           attributeName="r"
@@ -81,8 +81,6 @@ exports[`Loading should render correctly 1`] = `
       
 
     </svg>
-    
-
   </div>
 </div>
 `;

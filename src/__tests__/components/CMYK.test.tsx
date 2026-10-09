@@ -1,11 +1,10 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 
-import GNLC from '../../components/GNLC';
+import CMYK from '../../components/CMYK';
 
-describe('GNLC', () => {
+describe('CMYK', () => {
   it('should render correctly', () => {
-    const view = render(<GNLC />);
+    const view = render(<CMYK />);
 
     expect(view.container).toMatchSnapshot();
   });
