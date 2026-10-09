@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin linearGradient($direction) {
   background: linear-gradient(
     to $direction,

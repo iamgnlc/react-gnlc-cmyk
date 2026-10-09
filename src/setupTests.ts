@@ -2,10 +2,7 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-// Enzyme setup.
-import Adapter from '@cfaester/enzyme-adapter-react-18';
-import { configure } from 'enzyme';
-
-configure({ adapter: new Adapter() });
+// Expect/it are globals thanks to `test.globals: true` in vite.config.ts.
+// RTL cleanup happens automatically via globals mode.

@@ -9,6 +9,6 @@ Y88b  d88P 888   "   888     888     888   Y88b
  "Y8888P"  888       888     888     888    Y88b 
 `;
 
-export const logo = () => {
+export const logo = (): void => {
   console.info(ascii);
 };
